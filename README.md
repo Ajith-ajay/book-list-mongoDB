@@ -54,7 +54,7 @@ npm install nodemon --save-dev
 
 ```bash
 # Clone the repository
-git clone [https://github.com/username/repository.git](https://github.com/Ajith-ajay/book-list-mongoDB.git)
+git clone https://github.com/Ajith-ajay/book-list-mongoDB.git
 
 # Navigate into the directory
 cd repository
@@ -76,15 +76,16 @@ npm start
 
 ## Snaps
 **Index**
-![index.html](https://github.com/user-attachments/assets/9d0b1243-e8c8-490c-abe6-df19d04a7d5b)
-**Login**
-![login.html](https://github.com/user-attachments/assets/b3a194d6-70ef-429e-8b32-a139e32962ff)
-**Sign-up**
-![sign-up.html](https://github.com/user-attachments/assets/6b5303f2-e150-485e-8bae-7d49920c86e5)
-**Profile**
-![profile.html](https://github.com/user-attachments/assets/fb211bb0-74fb-45d2-83f8-f05d2194e221)
+![Screenshot (36)](https://github.com/user-attachments/assets/85a5c390-d031-41cf-a913-5754c0a213e0)
+The root page
+**Book List**
 
+![Screenshot (37)](https://github.com/user-attachments/assets/3358599f-09e5-480d-a7dc-0bd23215a340)
+After adding som books with list of books in table
+
+**Edit Books**
+![Screenshot (38)](https://github.com/user-attachments/assets/74f4612d-624c-435f-87e0-1ac570715654)
+Editing the book name
 
 ## Usage
-
-*This is a student level project to understanding the basic of node.js framework as a backend to make a complete login and sign up page using the html ,css, javascript* 
+*This is a student level project to understanding the basic of node.js framework as a backend to make a complete library management web application using the html ,css, javascript with mongoDB as database* 
