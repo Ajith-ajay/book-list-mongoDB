@@ -13,17 +13,15 @@
 
 ## Overview
 
-This the fullstack for login and sing-up page with profile also.
-Here i use mysql as database for saving the username and password information in a seperate table , this table is used to determine the account is already exist or not by applying the where clause in sql. If the email already in table the login page is redirected. If the email is not in the table then redirect to sign-up page. In the table the email column as primary key to avoid the repetation of the email.
+This the fullstack web application for book list management like library management using mongodb as the database.
+Here i use MondoDB as database for saving the boo title and book author name information in a collection name books in my local mongoDB database named library , this collection has the whole information about the book details. If the collection has the doccument then it will display on the table in the web application , if there is no document in the collection then the table of books will empty. 
 
 ## Required Modules
 
-    1.http
+    1.mongoose
     2.express
     3.body-parser
-    4.mysql2
-    5.express-handlebars
-    6.path
+    4.express-handlebars
 
 ## Installation Instruction
 
@@ -44,7 +42,7 @@ npm install body-parser
 npm install express-handlebars
 ```
 ```bash
-npm install mysql2
+npm install mongoose
 ```
 **nodemon**: This ia a library used to auto restart your application automatically when you make any changes in the code like live server in vs code extention. But this is a node.js library for auto restart.
 
@@ -56,7 +54,7 @@ npm install nodemon --save-dev
 
 ```bash
 # Clone the repository
-git clone [https://github.com/username/repository.git](https://github.com/Ajith-ajay/fullstack-login-sign-up.git)
+git clone [https://github.com/username/repository.git](https://github.com/Ajith-ajay/book-list-mongoDB.git)
 
 # Navigate into the directory
 cd repository
