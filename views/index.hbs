@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    {{#if edit_id}}
+    <h1>Book List</h1>
+    {{!-- form to edit book --}}
+    <form action="/edit-book/{{edit_id}}" method="post" id="book-form">
+        <h3>Edit the Book</h3>
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter book title" name="title" value="{{edit_book.title}}">
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" placeholder="Enter author name" name="author" value="{{edit_book.author}}">
+
+        <button type="submit">Commit change</button>
+    </form>
+    {{else}}
+    <h1>Book List</h1>
+    {{!--Form to add a new book --}}
+    <form action="/add-book" method="post" id="book-form">
+        <h3>Add a New Book</h3>
+       <center><p>{{message}}</p></center> 
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter book title" name="title" required>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" placeholder="Enter author name" name="author" required>
+
+        <button type="submit">Add Book</button>
+    </form>
+    {{/if}}
+
+    {{!-- Table to display the book list --}}
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="book-list">
+            {{#each books}}
+                 <tr>
+                    <td>{{this.title}}</td>
+                    <td>{{this.author}}</td>
+                    <td class="action">
+                        <button class="btn-edit"><a href="/?edit_id={{this._id}}">Edit</a></button>
+                        <button class="btn-delete"><a href="/?delete_id={{this._id}}">Delete</a></button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
